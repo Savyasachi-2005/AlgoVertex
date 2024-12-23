@@ -2,8 +2,8 @@
 Welcome to AlgoVertex, your ultimate dashboard for tracking coding progress and insights! Our platform provides:
 
 Interactive Circle Charts: Visualize your problem-solving journey with dynamic progress charts showing the number of Easy, Medium, and Hard questions you’ve solved.
-Comprehensive Stats: Gain detailed insights into your overall performance, including:
-Total Questions Solved
+Comprehensive Stats: Gain detailed insights into your overall performance, 
+including:
 Global Ranking
 Acceptance Rate
 Contribution Points
