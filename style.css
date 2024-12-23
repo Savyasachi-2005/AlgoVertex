@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-image: url("4.jpg");
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 650px;
+}
+h1{
+    font-size: 3rem;
+}
+.user-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: start;
+}
+.user-input-container{
+    display: flex;
+    justify-content: space-between;
+}
+#user-input{
+    width: 80%;
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+#search-btn{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7vh;
+  width: 10%;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  background-color: white;
+  font-family: 'Knewave', cursive;
+}
+.circle{
+    width : 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid rgb(90, 175, 209);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    font-style: italic;
+    font-weight: 700;
+    background-image: url("6.jpeg");
+    background: conic-gradient(#4b504d var(--progress-degree,0%),#283a2e 0);
+    flex-direction: column;
+    opacity: 0.8; /* Adjust the opacity to make the background image less transparent */
+}
+.circle span{
+    position: relative;
+    z-index: 2;
+}
+.progress{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+h4{
+    font-size: 0.9rem;
+}
+
+.cards{
+    background-color: rgb(238, 94, 27);
+    background-image: url("7.jpg");
+    background-size: cover;
+    width: 250px;
+    max-width: 290px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    opacity: 0.8;
+}
