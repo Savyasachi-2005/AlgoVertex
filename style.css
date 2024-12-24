@@ -1,59 +1,81 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
-body{
+body {
     background-image: url("4.jpg");
     color: white;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 2s ease-in-out; /* Fade-in effect for the body */
 }
-.container{
+.container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    
     padding: 20px;
     border-radius: 5px;
     width: 50%;
     max-width: 650px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
 }
-h1{
+.container:hover {
+    transform: scale(1.02); /* Slight zoom effect */
+}
+h1 {
     font-size: 3rem;
+    animation: slideInDown 1s ease-out; /* Slide-in effect for heading */
 }
-.user-container{
+.user-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
     justify-content: start;
 }
-.user-input-container{
+.user-input-container {
     display: flex;
     justify-content: space-between;
 }
-#user-input{
+#user-input {
     width: 80%;
     padding: 0.4rem;
     border-radius: 10px;
+    transition: box-shadow 0.3s ease; /* Smooth shadow effect on focus */
 }
-#search-btn{
+#user-input:focus {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+#search-btn {
     display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 7vh;
-  width: 10%;
-  margin: 0;
-  padding: 0;
-  border-radius: 10px;
-  background-color: white;
-  font-family: 'Knewave', cursive;
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+    width: 50%; /* Adjust width for better alignment */
+    margin: 10px auto; /* Center and add spacing */
+    padding: 0;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Knewave', cursive;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added transition for hover effects */
 }
-.circle{
-    width : 120px;
+
+#search-btn:hover {
+    background-color: rgb(200, 200, 200);
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+.user-input-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 12px; /* Space between username box and button */
+    align-items: center; /* Center-align items */
+}
+.circle {
+    width: 120px;
     height: 120px;
     border-radius: 50%;
     border: 4px solid rgb(90, 175, 209);
@@ -66,34 +88,40 @@ h1{
     font-style: italic;
     font-weight: 700;
     background-image: url("6.jpeg");
-    background: conic-gradient(#4b504d var(--progress-degree,0%),#283a2e 0);
+    background: conic-gradient(#4b504d var(--progress-degree, 0%), #283a2e 0);
     flex-direction: column;
     opacity: 0.8; /* Adjust the opacity to make the background image less transparent */
+    animation: rotate 4s linear infinite; /* Rotating animation */
 }
-.circle span{
+.circle span {
     position: relative;
     z-index: 2;
 }
-.progress{
+.progress {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 10px;
+    animation: fadeInUp 1.5s ease-out; /* Smooth fade-in for progress section */
 }
-.card{
+.card {
     margin-top: 2rem;
     margin-bottom: 2rem;
     max-width: 300px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover */
 }
-h4{
+.card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    opacity: 1; /* Ensures clarity */
+}
+h4 {
     font-size: 0.9rem;
 }
-
-.cards{
+.cards {
     background-color: rgb(238, 94, 27);
     background-image: url("7.jpg");
     background-size: cover;
@@ -103,4 +131,47 @@ h4{
     border-radius: 10px;
     font-size: 1rem;
     opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover effects */
 }
+.cards:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    opacity: 1;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* @keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} */
